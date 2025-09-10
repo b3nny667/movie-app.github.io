@@ -1,0 +1,120 @@
+.watched-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.watched-header h1 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.watched-header .subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.watched-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.watched-card {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  transition: transform 0.2s ease;
+}
+
+.watched-card:hover {
+  transform: translateY(-3px);
+}
+
+.poster-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3;
+}
+
+.watched-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.progress-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: rgba(31, 33, 35, 0.9);
+  color: var(--accent-color);
+  padding: 6px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.watched-details {
+  padding: 0.8rem;
+}
+
+.watched-details h3 {
+  margin: 0 0 0.4rem 0;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.watched-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.4rem 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.media-type {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.progress-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0.3rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .watched-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+  
+  .watched-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+[data-theme="light"] .progress-badge {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
